@@ -1,0 +1,17 @@
+server {
+    listen 8443 ssl;
+    listen [::]:8443 ssl;
+    server_name 192.168.64.7;
+    ssl_certificate /etc/sslcert/server.crt;
+    ssl_certificate_key /etc/sslcert/server.key;
+
+    location / {
+      proxy_pass http://localhost:8080/;
+      proxy_set_header Host $host;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection upgrade;
+      proxy_set_header Accept-Encoding gzip;
+    }
+}
+
+
