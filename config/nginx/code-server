@@ -1,7 +1,7 @@
 server {
     listen 8443 ssl;
     listen [::]:8443 ssl;
-    server_name 192.168.64.7;
+    server_name localhost;
     ssl_certificate /etc/sslcert/server.crt;
     ssl_certificate_key /etc/sslcert/server.key;
 
