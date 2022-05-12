@@ -12,4 +12,10 @@ multipass info <name>
 multipass exec <name> -- cat ./.config/code-server/config.yaml 
 ```
 
-3. 
+3. Accept self-signed certificate and log in.
+
+4. Under 'Source Control' click on 'Clone Repository'
+
+5. Click 'Clone from Github' and follow authentication process.
+
+6. Select repositories to clone and specify path as '/var/www/'
