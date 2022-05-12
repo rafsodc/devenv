@@ -12,5 +12,5 @@ runcmd:
  - 'ln -s /etc/nginx/sites-available/code-server /etc/nginx/sites-enabled/code-server'
  - 'systemctl enable code-server@ubuntu'
  - 'systemctl start code-server@ubuntu'
- - 'systemctl start nginx'
+ - 'systemctl restart nginx'
 
