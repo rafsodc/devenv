@@ -5,7 +5,6 @@ packages:
   - nginx
   - php
   - postgresql-13
-  - pgadmin4
 apt:
   sources:
     php8:
@@ -16,7 +15,7 @@ apt:
     pgadmin4:
       source: "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/focal pgadmin4 main"
       keyid: 8881B2A8210976F2
-#runcmd:
-#  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/code-server.sh | /bin/bash -s'
-#  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/nginx.sh | /bin/bash -s'
-#  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/postgresql.sh | /bin/bash -s'
+runcmd:
+  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/code-server.sh | /bin/bash -s'
+  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/nginx.sh | /bin/bash -s'
+  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/postgresql.sh | /bin/bash -s'
