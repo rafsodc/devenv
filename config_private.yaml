@@ -3,7 +3,7 @@ apt_update: true
 apt_upgrade: true
 packages:
   - nginx
-  - php
+  - php-cli
   - postgresql-13
 apt:
   sources:
