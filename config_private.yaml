@@ -15,7 +15,8 @@ apt:
       keyid: 7FCC7D46ACCC4CF8
     pgadmin4:
       source: "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/focal pgadmin4 main"
-runcmd:
-  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/code-server.sh | /bin/bash -s'
-  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/nginx.sh | /bin/bash -s'
-  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/postgresql.sh | /bin/bash -s'
+      keyid: 8881B2A8210976F2
+#runcmd:
+#  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/code-server.sh | /bin/bash -s'
+#  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/nginx.sh | /bin/bash -s'
+#  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/postgresql.sh | /bin/bash -s'
