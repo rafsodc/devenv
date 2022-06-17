@@ -5,6 +5,8 @@ packages:
   - nginx
   - php-cli
   - postgresql-13
+  - docker-ce
+  - docker-compose
 apt:
   sources:
     php8:
@@ -15,7 +17,12 @@ apt:
     pgadmin4:
       source: "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/focal pgadmin4 main"
       keyid: 8881B2A8210976F2
+    docker:
+      source: "deb https://download.docker.com/linux/ubuntu focal stable"
+      keyid: 7EA0A9C3F273FCD8
 runcmd:
   - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/code-server.sh | /bin/bash -s'
   - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/nginx.sh | /bin/bash -s'
   - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/postgresql.sh | /bin/bash -s'
+  - 'curl https://raw.githubusercontent.com/rafsodc/devenv/main/install/composer.sh | /bin/bash -s'
+
