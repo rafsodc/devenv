@@ -12,10 +12,22 @@ multipass info <name>
 multipass exec <name> -- cat ./.config/code-server/config.yaml 
 ```
 
-3. Accept self-signed certificate and log in.
+3. Extract private_config.zip to ./private
 
-4. Under 'Source Control' click on 'Clone Repository'
+4. Mount ./private to /private on development environment
+```
+multipass mount ./private <name>:/private
+```
 
-5. Click 'Clone from Github' and follow authentication process.
+5. Accept self-signed certificate and log in.
 
-6. Select repositories to clone and specify path as '/var/www/'
+6. Under 'Source Control' click on 'Clone Repository'
+
+7. Click 'Clone from Github' and follow authentication process.
+
+8. Select repositories to clone and specify path as '/var/www/'
+
+9. Copy private files to necessary location on development environment
+```
+cp -r /private/* /var/www/
+```
