@@ -34,5 +34,5 @@ multipass mount ./private <name>:/private
 
 10. Copy private files to necessary location on development environment
 ```
-cp -r /private/* /var/www/
+multipass exec test2 -- cp -r /private/ /var/www/ 
 ```
