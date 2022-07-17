@@ -36,3 +36,12 @@ multipass mount ./private <name>:/private
 ```
 multipass exec test2 -- cp -r /private/ /var/www/ 
 ```
+
+11. In Code Server, open the folder /var/www/sodc-api/
+
+12. Open a terminal (Left Menu, Terminal > New Terminal.  Make sure the path is /var/www/sodc-api
+
+13. Run docker-compose:
+```
+sudo docker-compose --env-file .env.local up -d
+```
