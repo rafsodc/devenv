@@ -45,3 +45,18 @@ multipass exec test2 -- cp -r /private/ /var/www/
 ```
 sudo docker-compose --env-file .env.local up -d
 ```
+
+---
+
+Needed to modify React app to use config value for Captcha
+Some weird issues with EE and SSL blocking
+
+Need to config JWT:
+```
+sudo docker-compose exec php php bin/console lexik:jwt:generate-keypair
+```
+
+Also need to run message consume:
+```
+sudo docker-compose exec php php bin/console messenger:consume -vv
+```
