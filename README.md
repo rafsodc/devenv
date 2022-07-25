@@ -3,7 +3,7 @@ Scripts for setting up development environment
 
 1. Run multipass launch command (replace ```<name>``` with name of instance):
 ``` 
-multipass launch -n <name> --cloud-init config_private.yaml
+multipass launch -n <name> --cloud-init config.yaml --timeout 600 --mem 4G --cpus 4 --disk 10G -vvv
 ```
 
 2. Get IP address of instance, and password for code-server:
@@ -31,33 +31,19 @@ multipass exec <name> -- cat ./.config/code-server/config.yaml
 
 5. Extract private_config.zip to ./local/private
 
-6. Modify ./local/.env.  NB, your email needs to be the one registered with GitHub.  If you have email privacy on, use the one displayed in account settings.
+6. Copy ./local/.env to ./local/.env.local and modify with your details.  NB, your email needs to be the one registered with GitHub.  If you have email privacy on, use the one displayed in account settings.
 
 7. Mount ./local to /local on development environment
 ```
 multipass mount ./local <name>:/local
 ```
 
-7. Run Start Up Script.  This will copy the config files into the dev environment, configure the git user values, start docker and install the website. 
+7. Run Setup Script.  This will copy the config files into the dev environment, configure the git user values, start docker and install the website. Enter email address for admin account here.
 ```
-multipass exec test2 -- cp -r /private/ /var/www/ 
-```
-
-
----
-
-Need to config JWT:
-```
-sudo docker-compose exec php php bin/console lexik:jwt:generate-keypair
+multipass exec sodc --working-directory /var/www/sodc-api/ -- /local/setup.sh 
 ```
 
-Also need to run message consume:
+8.  Run Start Script.
 ```
-sudo docker-compose exec php php bin/console messenger:consume -vv
-```
-
-Configure user.email and user.name
-```
-git config --global user.name <name>
-git config --global user.email <email>
+multipass exec sodc --working-directory /var/www/sodc-api/ -- /local/start.sh 
 ```
