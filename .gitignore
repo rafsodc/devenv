@@ -1,3 +1,2 @@
-keys/
-private/
-private_files.zip
+/local/private/
+/local/.env
