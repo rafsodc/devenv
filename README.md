@@ -19,15 +19,15 @@ multipass exec <name> -- cat ./.config/code-server/config.yaml
 
 4. Pull source repositories via Code Server:
   
-  a. Browse to https://www.sodc.local:8443, accept self-signed certificate and log in.
+    a. Browse to https://www.sodc.local:8443, accept self-signed certificate and log in.
 
-  b. Under 'Source Control' click on 'Clone Repository'
+    b. Under 'Source Control' click on 'Clone Repository'
 
-  c. Click 'Clone from Github' and follow authentication process.
+    c. Click 'Clone from Github' and follow authentication process.
 
-  d. Select repositories to clone and specify path as '/var/www/'
+    d. Select repositories to clone and specify path as '/var/www/'
 
-  e. Open folder: /var/www/
+    e. Open folder: /var/www/
 
 5. Extract private_config.zip to ./local/private
 
@@ -38,12 +38,12 @@ multipass exec <name> -- cat ./.config/code-server/config.yaml
 multipass mount ./local <name>:/local
 ```
 
-7. Run Setup Script.  This will copy the config files into the dev environment, configure the git user values, start docker and install the website. Enter email address for admin account here.
+8. Run Setup Script.  This will copy the config files into the dev environment, configure the git user values, start docker and install the website. Enter email address for admin account here.
 ```
 multipass exec sodc --working-directory /var/www/sodc-api/ -- /local/setup.sh 
 ```
 
-8.  Run Start Script.
+9.  Run Start Script.
 ```
 multipass exec sodc --working-directory /var/www/sodc-api/ -- /local/start.sh 
 ```
