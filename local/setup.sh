@@ -1,5 +1,5 @@
 #!/bin/bash
-export $(echo $(cat /local/.env | sed 's/#.*//g'| xargs) | envsubst)
+export $(echo $(cat /local/.env.local | sed 's/#.*//g'| xargs) | envsubst)
 
 # Copy config files into directory
 sudo rsync -a /local/private/ /var/www/
