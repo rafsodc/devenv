@@ -44,10 +44,10 @@ multipass mount ./local <name>:/local
 
 8. Run Setup Script.  This will copy the config files into the dev environment, configure the git user values, start docker and install the website. Enter email address for admin account here.
 ```
-multipass exec sodc --working-directory /var/www/sodc-api/ -- /local/setup.sh 
+multipass exec <name> --working-directory /var/www/sodc-api/ -- /local/setup.sh 
 ```
 
 9.  Run Start Script.
 ```
-multipass exec sodc --working-directory /var/www/sodc-api/ -- /local/start.sh 
+multipass exec <name> --working-directory /var/www/sodc-api/ -- /local/start.sh 
 ```
