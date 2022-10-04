@@ -25,7 +25,11 @@ multipass exec <name> -- cat ./.config/code-server/config.yaml
 
     c. Click 'Clone from Github' and follow authentication process.
 
-    d. Select repositories to clone and specify path as '/var/www/'
+    d. Select the following repositories to clone and specify path as '/var/www/':
+    
+        * rafsodc/sodc-api
+        
+        * rafsodc/SODC-React-Members
 
     e. Open folder: /var/www/
 
