@@ -3,7 +3,7 @@ Scripts for setting up development environment
 
 1. Run multipass launch command (replace ```<name>``` with name of instance):
 ``` 
-multipass launch -n <name> --cloud-init config.yaml --timeout 600 --mem 4G --cpus 4 --disk 10G -vvv
+multipass launch -n <name> --cloud-init config.yaml --timeout 600 --mem 4G --cpus 4 --disk 10G -vvv focal
 ```
 
 2. Get IP address of instance, and password for code-server:
