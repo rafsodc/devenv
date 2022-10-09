@@ -47,7 +47,14 @@ multipass mount ./local <name>:/local
 multipass exec <name> --working-directory /var/www/sodc-api/ -- /local/setup.sh 
 ```
 
-9.  Run Start Script.
+9. Run Start Script.
 ```
 multipass exec <name> --working-directory /var/www/sodc-api/ -- /local/start.sh 
 ```
+
+10. Create database entities
+```
+multipass exec test --working-directory /var/www/sodc-api/ -- sudo docker-compose exec php php bin/console app:install:devenv
+```
+
+NB.  The dev environment uses a 'test' API key for the Notify Service to prevent accidental messages.  Email address must be set to one registered as a team address on the Notify Service, otherwise emails won't be received.
