@@ -8,6 +8,10 @@ sudo rsync -a /local/private/ /var/www/
 git config --global user.name $GIT_USER_NAME
 git config --global user.email $GIT_USER_EMAIL
 
+# Stop docker if running and prune
+sudo docker-compose down
+sudo docker system prune --all --volumes --force
+
 # Start docker
 sudo docker-compose --env-file .env.local build
 sudo docker-compose --env-file .env.local up -d
