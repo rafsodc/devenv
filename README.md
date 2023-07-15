@@ -53,6 +53,7 @@ multipass mount ./local <name>:/local
 ```
 multipass exec <name> --working-directory /var/www/sodc-api/ -- /local/setup.sh 
 ```
+Note: Known issue with MacOS.  If this does not generate any output, it's likely that the devenv folder has been sync'ed to iCloud, and files are not downloaded.  Right click on folder and select 'download now'.
 
 11. Run Start Script.
 ```
