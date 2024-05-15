@@ -8,7 +8,7 @@ git clone git@github.com:rafsodc/devenv.git
 
 2. Extract private.zip to devenv/local/private
 
-3. Run multipass launch command (replace ```<name>``` with name of instance):
+3. Run multipass launch command from ./devenv/ (replace ```<name>``` with name of instance):
 ``` 
 multipass launch -n <name> --cloud-init config.yaml --timeout 3600 --memory 4G --cpus 4 --disk 10G -vvv focal
 ```
