@@ -6,4 +6,4 @@ curl -fOL $CSDOWNLOAD
 dpkg -i code-server_${CSVERSION}_${ARCH}.deb
 systemctl enable code-server@ubuntu
 systemctl start code-server@ubuntu
-rm /code-server_${CSVERSION}_${ARCH}.deb
+rm code-server_${CSVERSION}_${ARCH}.deb
